@@ -57,10 +57,11 @@ This project provides a set of scripts to find, unpack, and display wallpapers f
     Since hyprland v0.4+ windowrulev2 is depracated and the following should be used:
     ```
     windowrule {
-        match = class:^(HyprPaper-WE-Window)$
+        name = hyprpaper-we-rules
+        match:class = ^(HyprPaper-WE-Window)$
         workspace = special silent
-        nofocus = true
-        noanim = true
+        no_focus = true
+        no_anim = true
         rounding = 0
     }
     ``` 
