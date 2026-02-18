@@ -53,7 +53,18 @@ This project provides a set of scripts to find, unpack, and display wallpapers f
 
 4.  **Configure Hyprland:**
     Add the following window rules to your `~/.config/hypr/hyprland.conf` file. This is crucial for web wallpapers to appear correctly in the background.
-
+    
+    Since hyprland v0.4+ windowrulev2 is depracated and the following should be used:
+    ```
+    windowrule {
+        match = class:^(HyprPaper-WE-Window)$
+        workspace = special silent
+        nofocus = true
+        noanim = true
+        rounding = 0
+    }
+    ``` 
+    For versions older than v0.4+ where windowrulev2 is supported use:
     ```
     # Rules for HyprPaper-WE
     windowrulev2 = workspace special silent, class:^(HyprPaper-WE-Window)$
